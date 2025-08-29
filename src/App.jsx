@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./index.css";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -30,8 +31,8 @@ function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-white to-indigo-50 p-8 font-sans overflow-hidden">
-      {/* Floating Book Emojis */}
+    <div className="relative min-h-screen bg-peach p-8 font-sans overflow-hidden">
+      {/* Optional Floating Book Emojis */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         {Array.from({ length: 15 }).map((_, i) => (
           <span
@@ -48,27 +49,25 @@ function App() {
         ))}
       </div>
 
-      {/* Header */}
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-indigo-700 flex justify-center items-center gap-3 relative z-10">
-        <span>📚</span>
-        <span>Book Finder</span>
-        <span>📖</span>
+      {/* Title */}
+      <h1 className="text-5xl font-bold text-center mb-10 text-brown relative z-10">
+        📚 Book Finder 📖
       </h1>
 
       {/* Search Bar */}
-      <div className="flex justify-center gap-3 mb-8 relative z-10">
+      <div className="flex justify-center mb-10 relative z-10">
         <input
           type="text"
           placeholder="Search by book title..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="px-5 py-3 rounded-full border border-gray-300 w-80 focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-md transition"
+          className="px-5 py-3 rounded-full border border-gray-300 w-80 focus:ring-2 focus:ring-brown focus:outline-none shadow-md transition"
         />
         <button
           onClick={searchBooks}
-          className="px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 shadow-lg transition transform hover:-translate-y-1"
+          className="px-6 py-3 bg-brown text-white rounded-full hover:bg-dark-brown shadow-lg transition transform hover:-translate-y-1 ml-3"
         >
-          Search
+          {loading ? "Searching..." : "Search"}
         </button>
       </div>
 
@@ -78,7 +77,7 @@ function App() {
       {/* Error */}
       {error && <p className="text-center text-red-500 mb-4 relative z-10">{error}</p>}
 
-      {/* Results */}
+      {/* Book Results */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 relative z-10">
         {books.map((book, idx) => (
           <div
@@ -108,12 +107,8 @@ function App() {
       {/* Tailwind Animation */}
       <style jsx>{`
         @keyframes bounce-slow {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
         }
         .animate-bounce-slow {
           animation: bounce-slow 3s infinite;

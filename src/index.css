@@ -11,8 +11,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Custom colors for Book Finder */
+  --peach: #FFDAB9;
+  --brown: #8B4513;
+  --dark-brown: #5C3317;
 }
 
+/* Links */
 a {
   font-weight: 500;
   color: #646cff;
@@ -22,6 +28,7 @@ a:hover {
   color: #535bf2;
 }
 
+/* Body */
 body {
   margin: 0;
   display: flex;
@@ -30,11 +37,13 @@ body {
   min-height: 100vh;
 }
 
+/* Headings */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+/* Buttons */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -54,6 +63,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Light mode overrides */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -66,3 +76,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* ===== Custom Tailwind Colors for Book Finder ===== */
+.bg-peach { background-color: var(--peach); }
+.text-brown { color: var(--brown); }
+.bg-brown { background-color: var(--brown); }
+.hover\:bg-dark-brown:hover { background-color: var(--dark-brown); }
+.focus\:ring-brown:focus { box-shadow: 0 0 0 2px var(--brown); }
