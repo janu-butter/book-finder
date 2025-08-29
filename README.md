@@ -1,12 +1,30 @@
-# React + Vite
+# 📚 Cute Book Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **fun and interactive React app** that lets users search for books by title using the Open Library API.  
+Perfect for students or book lovers who want to quickly find books with cover images, authors, and publish year.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- Search books by title 🔍  
+- Display book cover, title, author, and first published year 📖  
+- Loading message while fetching data ⏳  
+- Error handling if no books are found ❌  
+- Responsive design for all devices 📱💻  
+- Floating book emojis and cute hover effects for better user experience 🎈📚  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+- **Frontend:** React  
+- **Styling:** Tailwind CSS  
+- **Data Source:** Open Library API  
+
+---
+
+## 🚀 How to Run Locally
+
+1. **Clone the repository:**
+```bash
+git clon
+
